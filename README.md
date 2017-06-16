@@ -1,12 +1,12 @@
-# Project Name
+# tenden|see
 
 > Pithy project description
 
 ## Team
 
-  - __Product Owner__: Guedis Cardenas, Thomas O'Connor
-  - __Scrum Master__: Duncan Pederse
-  - __Development Team Members__: Debasish Mozumder
+  - __Product Owner__: Thomas O'Connor
+  - __Scrum Master__: Duncan Pedersen
+  - __Development Team Members__: Guedis Cardenas, Debasish Mozumder
 
 ## Table of Contents
 
