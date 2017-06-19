@@ -32,7 +32,6 @@ routes.route('/api/dates')
   .put(controllers.updateDate)
   .delete(controllers.deleteDate);
 
-
 routes.route('/api/friends')
   .post(controllers.addFriends)
   .delete(controllers.deleteFriend);
