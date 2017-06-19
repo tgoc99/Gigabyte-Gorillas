@@ -32,7 +32,6 @@ const getUserData = (userId, token) => {
     resData.user.private = resData.user.private.lastIndexOf(1) !== -1;
     if(resData['user'].password) delete resData['user'].password;
 
-    //ADDED BELOW TO GET FRIENDS AND ALL OTHER USERS - DUNCAN
     resData['allUsers'] = [];
     resData['friends'] = [];
     return retrievePromise(dbHelpers.query('retrieveAllOtherUsers', userId))
@@ -49,7 +48,6 @@ const getUserData = (userId, token) => {
       return retrievePromise(dbHelpers.query('retrieveFriends', userId))
       .then((friends) => {
         resData['friends'] = friends.map(friend => friend.id_followee);
-        //BELOW FOLLOWS THE CODE THAT WAS EXISTING BEFORE - DUNCAN
         return retrievePromise(dbHelpers.query('retrieveUserHabits', userId))
         .then(habits => {
           if(habits.length) {
@@ -92,8 +90,6 @@ exports.getUserData = getUserData;
 
 // USERS -------------------------------->
 exports.getUser = (req, res) => {
-  //ADDED THE FIRST IF STATEMENT TO ACCOUNT FOR CLICKING ON ANOTHER
-  //USERS PROFILE. LEFT ELSE BLOCK UNCHANGED - DUNCAN
   if (req.params.user) {
     let user = {id: req.params.user};
     getUserData(user.id)
@@ -288,7 +284,6 @@ exports.updateDate = (req, res) => {
   } else {
     updatePromise(req.body.data, 'dates', req.body.data.id)
     .then(date => {
-      // console.log('updated date:', date);
       res.status(200).json(date);
     })
     .catch(err => console.error('Error updating date in DB (no swap):', err))
