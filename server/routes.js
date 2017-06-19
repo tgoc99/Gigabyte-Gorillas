@@ -22,10 +22,6 @@ routes.route('/api/users/:user')
   .put(controllers.patchUser)
   .delete(controllers.deleteUser);
 
-routes.route('/api/users')
-  .get(controllers.getUser)
-  .put(controllers.patchUser);
-
 routes.route('/api/habits')
   .post(controllers.addHabit)
   .put(controllers.updateHabit)
