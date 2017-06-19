@@ -19,8 +19,7 @@ routes.post('/facebook', fbAuth);
 routes.route('/api/users/:user')
   .get(controllers.getUser)
   .post(controllers.addUser)
-  .put(controllers.patchUser)
-  .delete(controllers.deleteUser);
+  .put(controllers.patchUser);
 
 routes.route('/api/habits')
   .post(controllers.addHabit)
