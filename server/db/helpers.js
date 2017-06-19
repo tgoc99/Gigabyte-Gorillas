@@ -1,8 +1,7 @@
 const db = require('./db-config.js');
 
 let user;
-
-  // HELPER FOR DATE FORMATTING
+// HELPER FOR DATE FORMATTING
   twoDigits = d => {
       if(0 <= d && d < 10) return "0" + d.toString();
       if(-10 < d && d < 0) return "-0" + (-1*d).toString();
@@ -12,6 +11,8 @@ let user;
   Date.prototype.toMysqlFormat = function() {
       return this.getUTCFullYear() + "-" + twoDigits(1 + this.getUTCMonth()) + "-" + twoDigits(this.getUTCDate()) + " " + twoDigits(this.getHours()) + ":" + twoDigits(this.getUTCMinutes()) + ":" + twoDigits(this.getUTCSeconds());
   };
+
+
 module.exports = {
   // FUNCTION ESCAPES INPUT
   create: (input, table, cb) => {

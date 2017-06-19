@@ -1,15 +1,9 @@
 const AWS = require('aws-sdk');
 const config = require('../config');
-// const zlib = require('zlib'); // USE THIS TO COMPRESS?
 const fs = require('fs');
 const shortid = require('shortid');
-// UPLOAD STREAM PARAMETERS
-// const s3Stream = require('s3-upload-stream')(new AWS.S3({
-//   accessKeyId: config.storageId,
-//   secretAccessKey: config.storageKey,
-//   signatureVersion: 'v4'
-// }));
-// UPLOAD DIRECT PARAMETERS
+
+// UPLOAD PARAMETERS
 const s3 = new AWS.S3({
   accessKeyId: config.storageId,
   secretAccessKey: config.storageKey,
@@ -21,7 +15,6 @@ const s3 = new AWS.S3({
 module.exports = (file, cb) => {
 
 // DIRECT UPLOAD
-
   var params = {
 		Bucket: config.bucket,
 		Key: `${shortid.generate()}.jpg`,
