@@ -6,9 +6,6 @@ const db = require('./db/db-config.js');
 
 const app = express();
 
-// IMPLEMENT THE BELOW LATER? OR NO NEED BC APP NOT SITE? (TURN INTO MIDDLEWARE FIRST...)
-// app.use('/api', auth.checkAuth);
-
 // MIDDLEWARE
 app.use(cookieParser());
 app.use(morgan('dev'));
