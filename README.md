@@ -43,7 +43,7 @@ tenden|see allows users to manage and track daily tasks like any other habit tra
 
 ## Team
 
-  - __Product Owner__: Thomas O'Connor
+  - __Product Owner / Developer__: Thomas O'Connor
   - __Scrum Master__: Duncan Pedersen
   - __Development Team Members__: Guedis Cardenas, Debasish Mozumder
 
