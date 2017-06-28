@@ -26,7 +26,7 @@ tenden|see allows users to manage and track daily tasks like any other habit tra
 * Follow friends 
   - View your friends' photos
 * Private-mode
-  - Make habits private 
+  - Make habits private (not visible to other users)
 * Insights on your habits
   - Streaks, success rate, and more
 
